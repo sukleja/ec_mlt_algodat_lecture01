@@ -3,7 +3,7 @@ import time as time
 
 # Examples for programming basics and Python
 
-#Data type assignment and operators
+# Data type assignment and operators
 # integer
 x = 1
 y = 2
@@ -60,13 +60,10 @@ def sum_two_numbers(num1: int, num2: int):
     return sum
 
 
-#with return type annotation
+# with return type annotation
 def concat_string(word1: str, word2: str) -> str:
     result = word1 + word2
     return result
-
-
-
 
 
 # control stuctures
@@ -110,11 +107,12 @@ def loop_numbers(num: int):
     for i in range(num):
         print(i + 1)
 
-#tuple unpacking and enumerate()
+
+# tuple unpacking and enumerate()
 def tuple_unpacking():
-    lst=['A','B','C']
+    lst = ['A', 'B', 'C']
     for index, value in enumerate(lst):
-        print(index,value)
+        print(index, value)
 
 
 # looping over an array
@@ -157,62 +155,57 @@ def reference():
     else:
         print("These are two different objects")
 
-#checking data types
+
+# checking data types
 def data_types(data):
-    x=type(data)
+    x = type(data)
     print(type(data))
-    print(isinstance(data,float))
+    print(isinstance(data, float))
 
 
-
-#Generators
+# Generators
 def odd_gen(j):
-    i=1
-    while i<j:
+    i = 1
+    while i < j:
         yield i
-        i+=2
+        i += 2
+
 
 def odd_lst(j):
-    i=1
-    lst=[]
-    while i<j:
+    i = 1
+    lst = []
+    while i < j:
         lst.append(i)
-        i+=2
+        i += 2
     return lst
 
 
-
-
-
 if __name__ == '__main__':  # only executes if our file is the main program
-    #scope()
+    # scope()
 
-    #name = input("Enter your name: ")
-    #print("Your name ist: " + name)
+    # name = input("Enter your name: ")
+    # print("Your name ist: " + name)
     data_types(1)
     data_types(2.0)
     data_types("text")
     reference()
-    print(concat_string.__annotations__) #show annotations
+    print(concat_string.__annotations__)  # show annotations
 
-    #demonstrate generators
-    new_arr=arr.array('i',[1]*(10**6))
-    t1=time.time()
-    x=odd_gen(10)
-    print("%.6f"%(time.time()-t1))
-    t1=time.time()
-    y=odd_lst(10)
-    print("%.6f"%(time.time()-t1))
+    # demonstrate generators
+    new_arr = arr.array('i', [1] * (10 ** 6))
+    t1 = time.time()
+    x = odd_gen(10)
+    print("%.6f" % (time.time() - t1))
+    t1 = time.time()
+    y = odd_lst(10)
+    print("%.6f" % (time.time() - t1))
 
-    #iterate over iterator object
+    # iterate over iterator object
     for i in x:
-        print(i,end=" ")
+        print(i, end=" ")
     print('\n')
 
     tuple_unpacking()
-
-
-
 
 ############################################################
 # binary, hexadecimal and octal
