@@ -110,6 +110,12 @@ def loop_numbers(num: int):
     for i in range(num):
         print(i + 1)
 
+#tuple unpacking and enumerate()
+def tuple_unpacking():
+    lst=['A','B','C']
+    for index, value in enumerate(lst):
+        print(index,value)
+
 
 # looping over an array
 def loop_list():
@@ -201,6 +207,9 @@ if __name__ == '__main__':  # only executes if our file is the main program
     #iterate over iterator object
     for i in x:
         print(i,end=" ")
+    print('\n')
+
+    tuple_unpacking()
 
 
 
